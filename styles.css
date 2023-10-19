@@ -1,6 +1,6 @@
 
 .body{
-    padding: 10px;
+    padding: 30px;
     font-size: 1.2em;
     overflow-y: auto ; 
     height: 100vh;
@@ -20,24 +20,13 @@ body{
     font-size: 1.2em;
     /* font-family: 'Victor Mono', monospace; */
 }
-.content{
-    background-color: rgba(128, 128, 128,0.01);
-    margin-top: 10px;
-    padding: 10px;
+.profileImage{
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
 }
-.resumeTitle{
-    font-family: 'Young Serif', serif;
-    font-size: 1.4em;
-    letter-spacing: 1.1px;
-    color: rgb(185, 189, 193);
-    /* font-weight: 700; */
-}
-#nav{
-    /* padding:0px 10px 0 10px; */
-    background-color: rgba(77, 79, 77, 0.5);
-    font-size: larger;
-    font-weight:bolder;
-}
+
+
 .name{
     text-align: center;
     font-size: 3em;
@@ -61,47 +50,33 @@ body{
     font-family: 'Young Serif', serif;
     font-weight: 600;
 }
-
-
-li{
-    font-weight: normal;
-
-
-}
-img{
-    width: 215px;
-    height: 215px;
-    border-radius: 50%;
+.projectName{
+    font-size: 1.5em;
 }
 
-
-
-
-
-label{
-    font-weight: 500;
-    font-size: 1.2em;
-    font-family: 'Young Serif', serif;
-}
-.training{
-    width:80%;
-    height: 10em;
-    overflow-y: auto ;
+#nav{
+    /* padding:0px 10px 0 10px; */
+    background-color: rgba(77, 79, 77, 0.5);
+    font-size: larger;
+    font-weight:bolder;
 }
 .scroll{
     height: 10em;
     overflow-y: auto ; 
 }
-.skill{
-    width: 20%;
+
+li{
+    list-style: none;
+}
+.individualProject{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.projectImage{
+    width: 215px;
+    height: 215px;
 
 }
-.experience{
-    padding-bottom: 1.5em;
-}
 
 
 
-.projectName{
-    font-size: 1.5em;
-}

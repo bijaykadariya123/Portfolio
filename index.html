@@ -7,164 +7,117 @@
     <link rel = "stylesheet" href="./styles.css">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Great+Vibes&family=Mohave:wght@300;400;600;700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet"> -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Great+Vibes&family=Mohave:wght@300;400;600;700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Great+Vibes&family=Mohave:wght@300;400;600;700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100&family=Young+Serif&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(15, end) infinite;
+}
+    </style>
 </head>
-<body>
+<body> 
+        <div class="flex justify-between items-center h-14 ">
+            <ul class="flex justify-between items-center h-14">
+                <li class="navBarright p-4"><a href="./Resume7:26:23.pdf" target="_blank" class="block px-4 py-2">Resume</a></li>   
+                <li class="navBarright p-4"><a href="https://www.linkedin.com/in/bijay-kadariya-212a11247/" target="_blank" class="block px-4 py-2">LinkedIn</a></li>   
+            </ul>
+        </div>
 
-      <!-- ---------------MY CODE-------------------------- -->
-    
-    <div>
-
-        <nav  class="relative group" id ="nav">
-            <div class ="flex justify-between  items-center">
-                <!-- Dropdown button -->
-                <div>
-                    <h3 class="text-black px-4 py-2 rounded focus:outline-none group-hover:opacity-50 resumeTitle">Resume</h3>
-                    <!-- Dropdown menu -->
-                    <ul class="absolute invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                        <li><a href="./Resume7:26:23.pdf" download class="block px-4 py-2">Download</a></li>
-                        <li><a href="./Resume7:26:23.pdf" target="_blank" class="block px-4 py-2">View</a></li>
-                    </ul>
-                </div>    
-
-            </div>
-
-
-        
-        </nav>
-
-
+        <!--BODY -->
         <div class="body">
             <div class="hero">
                 <header>
                     <h1 class="name">BIJAY KADARIYA</h1>
                     <h3 class="title">Software Engineer | Full Stack Developer</h3>
+                    <p class="name" style="font-size: 25px;">kadbijay@gmail.com</p>
                 </header>
-
                 <div  class="flex justify-center items-center">
-                    <img src ="./upload.jpeg"/>
+                    <img class="profileImage" src ="./upload.jpeg"/>
                 </div>
             </div>
-
-            
             <div class="content"> 
-                    <div>
-                        <h2 class="titleFonts"> Summary</h2>
-                        <p>
-                            Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and
-                            leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify needs, optimize
-                            design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for
-                            handling sensitive information.
-                        </p>
+                <h2 class="titleFonts"> Summary</h2>
+                <p>
+                    Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a milita background and
+                    leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize
+                    design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for
+                    handling sensitive information.
+                </p>
+            </div>
+            <div class="skill" style="text-align: center;">
+                <p class="titleFonts">Skills</p>
+                <ul class="list-disc pl-4 scroll">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node</li>
+                    <li>Express</li>
+                    <li>React</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Bootstrap</li>
+                    <li>tailwindcss</li>
+                </ul>
+            </div>
+
+            <div class="projectGroup">
+                <h2 class="titleFonts animate-typing"> Projects</h2>
+                <div id="projectList" class="grid grid-cols-2 gap-4" id="projectList">
+                    <div class="individualProject">
+                        <div>
+                            <h2 class="projectName">Holiday Finder</h2>
+                            <a href="https://github.com/bijaykadariya123/ProjectUnit1">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Technologies: HTML CSS JavaScript, JQuery and Ajax API requests</p>
+                        </div>  
+                        <div>
+                            <img class="projectImage" src="./country.png" alt="image"/>
+                        </div>
+                    </div>
+
+                    <div class="individualProject">
+                        <div>
+                            <h2 class="projectName">RecipeApp</h2>
+                            <a href="https://github.com/bijaykadariya123/unit3project_frontend">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Technologies: HTML, CSS, JavaScript, React, Express, MongoDB, Sass, Bootstrap</p>
+                        </div>  
+                        <div>
+                            <img class="projectImage" src="./recipeApp.png" alt="image"/>
+                        </div>
+                    </div>
+
+                    <div class="individualProject">
+                        <div>
+                            <h2 class="projectName">MovieApp</h2>
+                            <a href="https://github.com/bijaykadariya123/project-4-movieapp-react">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Technologies:  HTML, CSS, JavaScript,Python, Django, React, Node, Neon,Bootstrap</p>
+                        </div>  
+                        <div>
+                            <img class="projectImage" src="./movieapp.png" alt="image name"/>
+                        </div>
+                    </div>
+
+                    <div class="individualProject">
+                        <div>
+                            <h2 class="projectName">Shopify</h2>
+                            <a href="https://github.com/bijaykadariya123/capstone-frontEnd">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Technologies:  HTML, CSS, JavaScript,Python, Django, React, Node, Neon,tailwindcss</p>
+                        </div>  
+                        <div>
+                            <img class="projectImage" src="./Shopify.png" alt="image"/>
+                        </div>
                     </div>
 
 
 
-                    <!-- 
-                        ============================================================
-                     -->
-
-<!-- 
-                     <div class="group skillGroup">
-                        <h2 class="titleFonts cursor-pointer group-hover:text-blue-500">Skills</h2>
-                        <ul class="list-disc pl-4 hidden group-hover:block" id="skillsList">
-                          <li>HTML</li>
-                          <li>CSS</li>
-                          <li>JavaScript</li>
-                          <li>Node</li>
-                          <li>Express</li>
-                          <li>React</li>
-                          <li>SQL</li>
-                          <li>Python</li>
-                          <li>Bootstrap</li>
-                          <li>tailwindcss</li>
-                        </ul>
-                      </div> -->
-
-                <h2 class="titleFonts"> Experience</h2>
-                <div  class="experience">
-                    <label>Application Developer</label>
-                    <ul class="list-disc pl-4 experienceList">
-                        <li>Built a data visualization chart (Sunburst Chart) using HTML, CSS, JavaScript, and D3 library to
-                            visualize the project status
-                        </li>
-                        <li>Experienced Using SharePoint Online and SharePoint Designer 2013</li>
-                        <li>Improvised an existing web page by adding features such as buttons, a scroll bar, a navigation
-                            bar, and hyperlinks to make the web page efficient and user-friendly for clients.</li>
-                    </ul>
                 </div>
-                <div  class="experience">
-                    <label>Front-End Developer</label>
-                    <ul class="list-disc pl-4">  
-                        <li>Designed and built prototype web pages utilizing HTML and CSS for a user-friendly and visually
-                            appealing interface</li>
-                        <li>Experienced using HTML Tags, and attributes to create websites with components such as Header,
-                            Footer, Navigation, logins, forms, etc.</li>
-                    </ul>
-                </div>
-                <div class="experience">
-                    <label >U.S. Army</label>
-                    <ul class="list-disc pl-4"> 
-                        <li>Managed and coordinated the movement of personnel, equipment, and supplies to ensure
-                            operational readiness and support mission success</li>
-                        <li>Updated charts and reports to track inventories resulting in 100% accountability</li>
-                    </ul>
-                </div>
-
-                 <div class="group projectGroup">
-                    <h2 class="titleFonts cursor-pointer group-hover:text-blue-500" id="projectDropdown"> Projects</h2>
-                    <div class="list-disc pl-4 hidden group-hover:block" id="projectList">
-                        <h1 class="projectName">National Holiday Finder</h1>
-                        <a href="https://github.com/bijaykadariya123/ProjectUnit1">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                        <li>Built a responsive web application utilizing HTML CSS JS, JQuery and Ajax API requests to determine the National Holiday of United States</li>
-                    </li>
-                        <h1 class="projectName">CountryPedia</h1>
-                        <a href="https://github.com/bijaykadariya123/Project2">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                        <li>This project will populate the Countries Name and flag on the landing page and will be able to create, read, update, and delete countries and its information</li>
-                        <li>Technologies: HTML, CSS, JavaScript, Express, MongoDB, EJS, Bootstrap</li>
-                      </li>
-                    </div>
-                  </div>
-
-
-
-
-                <div class="flex justify-between footer">
-                    <div class="training">
-                        <h2 class="titleFonts"> Education and Training</h2>
-                        <h4 class="generalAssembly"> General Assembly</h4>
-                            <p style="width: 40%;"><span class="scroll">Full-stack software engineering 420+ hour program focused on product development fundamentals,
-                                object-oriented programming, MVC frameworks, data modeling, and team collaboration strategies.</span>
-                            </p>
-                    </div>
-                    <!-- <div class="skill">
-                        <p class="titleFonts">Skills</p>
-                        <ul class="list-disc pl-4 scroll">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Node</li>
-                            <li>Express</li>
-                            <li>React</li>
-                            <li>SQL</li>
-                            <li>Python</li>
-                            <li>Bootstrap</li>
-                            <li>tailwindcss</li>
-                        </ul>
-                    </div> -->
-
-                </div>
-            </div>   
-
+            </div>
         </div>
-    </div>
-
-    
 </body>
 </html>
+
