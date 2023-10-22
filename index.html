@@ -14,20 +14,120 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .animate-typing {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 2s steps(15, end) infinite;
-}
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s steps(15, end) infinite;
+        }
+
+
+        /* .relative {
+            position: relative;
+        } */
+        .dropdown {
+            position: absolute;
+            top: 100%; /* Position below the parent element */
+            left: 0;
+            display: none;
+        }
+        .relative:hover .dropdown {
+            display: block;
+        }
+        .dropdown {
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+        }
+ 
+        .dropdown li {
+            margin: 5px 0;
+        }
+
+
+
     </style>
+
+<script>
+    // JavaScript functions to show and hide the pop-up
+    function showPopup(title, description) {
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-description').innerText = description;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
 </head>
 <body> 
         <div class="flex justify-between items-center h-14 ">
             <ul class="flex justify-between items-center h-14">
                 <li class="navBarright p-4"><a href="./Bijay_Kadariya_Resume_1023.pdf" target="_blank" class="block px-4 py-2">Resume</a></li>   
-                <li class="navBarright p-4"><a href="https://www.linkedin.com/in/bijay-kadariya-212a11247/" target="_blank" class="block px-4 py-2">LinkedIn</a></li>   
+                <li class="navBarright p-4"><a href="https://www.linkedin.com/in/bijay-kadariya-212a11247/" target="_blank" class="block px-4 py-2">LinkedIn</a></li>    
+                <li class="navBarright p-4"><a href="https://github.com/bijaykadariya123" target="_blank" class="block px-4 py-2">GitHub</a></li> 
+                <!--====================================New Changes=================================================================  -->
+                <li class="p-6 cursor-pointer" onclick="showPopup('', 'Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for handling sensitive information.')">About</li>
+            
+            <!-- <div class="relative cursor-pointer ">
+                <p class=" p-8">Contact</p>
+                <div class="dropdown">
+                    <ul>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2" >kadbijay@gmail.com</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2" >804-937-6758</li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="relative cursor-pointer ">
+                <p class=" p-6">Project</p>
+                <div class="dropdown">
+                    <ul>
+                        <h1 class="border-b mb-2" style="color: rgb(41, 39, 39); font-size: 25px;">DEPLOYED</h1>
+                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://holidayfinder.onrender.com">Holidayfinder</a></li>
+                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://recipe-app-su1y.onrender.com">RecipeApp</a></li>
+                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://project4-movieapp-react.onrender.com">MovieApp</a></li>
+                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://shopping-cart-p6gf.onrender.com">Shopify</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative cursor-pointer ">
+                <p class=" p-6">Skills</p>
+                <div class="dropdown">
+                    <ul>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">HTML</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">CSS</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">JavaScript</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Bootstrap</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">tailwind</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">React</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">MongoDB</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">PostgreSQL</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Node</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Express</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Python</li>
+                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Django</li>
+                   
+                    </ul>
+                </div>
+            </div>
+                
+            <!-- ===================================================================================================== -->
+            
             </ul>
         </div>
+        <div id="popup" class="popup">
+            <div class="popup-content max-w-md">
+                <h2 id="popup-title" class="text-2xl font-semibold mb-2"></h2>
+                <p id="popup-description"></p>
+                <button class="mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+
+        
 
         <!--BODY -->
         <div class="body">
@@ -35,14 +135,13 @@
                 <header>
                     <h1 class="name">BIJAY KADARIYA</h1>
                     <h3 class="title">Software Engineer | Full Stack Developer</h3>
-                    <p class="name" style="font-size: 25px;">kadbijay@gmail.com</p>
                 </header>
                 <div  class="flex justify-center items-center">
                     <img class="profileImage" src ="./upload.jpeg"/>
                 </div>
             </div>
             <div class="content"> 
-                <h2 class="titleFonts"> Summary</h2>
+                <h2 class="titleFonts">About</h2>
                 <p>
                     Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and
                     leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize
@@ -52,7 +151,7 @@
             </div>
             <div class="skill" style="text-align: center;">
                 <p class="titleFonts">Skills</p>
-                <ul class="list-disc pl-4 scroll">
+                <ul class="skillGrid list-disc pl-4 scroll">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -119,6 +218,11 @@
 
                 </div>
             </div>
+
+        </div>
+        <div style="text-align: center;" class="pt-3">
+            <P>kadbijay@gmail.com</P>
+            <P>804-937-6758</P>
         </div>
 </body>
 </html>

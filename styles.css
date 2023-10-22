@@ -13,16 +13,33 @@ body{
     background-size: cover;
     color: rgb(185, 189, 193);
     padding:0 0 10px 0px;
-
-    /* font-family: 'Fjalla One', sans-serif; */
-    /* font-family: 'Great Vibes', cursive; */
+ 
     font-family: 'Mohave', sans-serif;
     font-size: 1.2em;
-    /* font-family: 'Victor Mono', monospace; */
+
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .profileImage{
-    width: 215px;
-    height: 215px;
+    width: 375px;
+    height: 415px;
     border-radius: 50%;
 }
 
@@ -76,6 +93,10 @@ li{
     width: 215px;
     height: 215px;
 
+}
+.skillGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
