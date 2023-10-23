@@ -47,7 +47,7 @@
 
 
 
-    </style>
+</style>
 
 <script>
     // JavaScript functions to show and hide the pop-up
@@ -61,15 +61,56 @@
         document.getElementById('popup').style.display = 'none';
     }
 </script>
+
+<script>
+    function scrollToSkillsSection() {
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            skillsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+<script>
+    function scrollToAboutSection() {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+<script>
+    function scrollToProjectsSection(){
+        const projectSection = document.getElementById('projects');
+        if(projectSection){
+            projectSection.scrollIntoView({behavior:'smooth'});
+        }
+    }
+</script>
 </head>
 <body> 
         <div class="flex justify-between items-center h-14 ">
             <ul class="flex justify-between items-center h-14">
+
+                <div class="relative cursor-pointer">
+                    <p class="skillsdrop p-6" onclick="scrollToAboutSection()">About</p>
+                </div>
+
+                <!-- <li class="about p-6 cursor-pointer" onclick="showPopup('', 'Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for handling sensitive information.')">About</li> -->
+                
+                <div class="relative cursor-pointer">
+                    <p class="skillsdrop p-6" onclick="scrollToSkillsSection()">Skills</p>
+                </div>
+
+                <div class="relative cursor-pointer ">
+                    <p class="p-6" onClick="scrollToProjectsSection()">Project</p>
+                   
+                </div>
                 <li class="navBarright p-4"><a href="./Bijay_Kadariya_Resume_1023.pdf" target="_blank" class="block px-4 py-2">Resume</a></li>   
                 <li class="navBarright p-4"><a href="https://www.linkedin.com/in/bijay-kadariya-212a11247/" target="_blank" class="block px-4 py-2">LinkedIn</a></li>    
                 <li class="navBarright p-4"><a href="https://github.com/bijaykadariya123" target="_blank" class="block px-4 py-2">GitHub</a></li> 
                 <!--====================================New Changes=================================================================  -->
-                <li class="p-6 cursor-pointer" onclick="showPopup('', 'Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for handling sensitive information.')">About</li>
             
             <!-- <div class="relative cursor-pointer ">
                 <p class=" p-8">Contact</p>
@@ -80,40 +121,7 @@
                     </ul>
                 </div>
             </div> -->
-            <div class="relative cursor-pointer ">
-                <p class=" p-6">Project</p>
-                <div class="dropdown">
-                    <ul>
-                        <h1 class="border-b mb-2" style="color: rgb(41, 39, 39); font-size: 25px;">DEPLOYED</h1>
-                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://holidayfinder.onrender.com">Holidayfinder</a></li>
-                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://recipe-app-su1y.onrender.com">RecipeApp</a></li>
-                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://project4-movieapp-react.onrender.com">MovieApp</a></li>
-                        <li style="color: rgb(67, 42, 165); text-decoration: underline;"><a href = "https://shopping-cart-p6gf.onrender.com">Shopify</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
 
-            <div class="relative cursor-pointer ">
-                <p class=" p-6">Skills</p>
-                <div class="dropdown">
-                    <ul>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">HTML</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">CSS</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">JavaScript</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Bootstrap</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">tailwind</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">React</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">MongoDB</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">PostgreSQL</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Node</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Express</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Python</li>
-                        <li style="color: rgb(41, 39, 39);" class="border-b mb-2">Django</li>
-                   
-                    </ul>
-                </div>
-            </div>
                 
             <!-- ===================================================================================================== -->
             
@@ -140,23 +148,20 @@
                     <img class="profileImage" src ="./upload.jpeg"/>
                 </div>
             </div>
-            <div class="content"> 
-                <h2 class="titleFonts">About</h2>
+            <div class="content" id ="about" style="padding-top: 20px;"> 
+                <h2 class=" titleFonts">About</h2>
                 <p>
-                    Full Stack Developer specializing in HTML, CSS, JavaScript, React, Python, Node, and Express. Team player with a military background and
-                    leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify need  optimize
-                    design usability, and enhance performance. Trusted by the Department of Defense with an active Secret Clearance for
-                    handling sensitive information.
+                    Full Stack Developer specializing in JavaScript, React, Python, and Django. Team player with a military background and leadership qualities. Collaborates effectively with government clients and cross-functional teams to identify needs, optimize design usability, and enhance performance. Trusted by the Department of Defense with an Active Secret Clearance for handling sensitive information.
                 </p>
             </div>
-            <div class="skill" style="text-align: center;">
+            <div class="skill" id = "skills" style="padding-top: 20px;">
                 <p class="titleFonts">Skills</p>
                 <ul class="skillGrid list-disc pl-4 scroll">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>Bootstrap</li>
-                    <li>tailwindcss</li>
+                    <li>Tailwind CSS</li>
                     <li>React</li>
                     <li>MongoDB</li>
                     <li>PostgreSQL</li>
@@ -167,14 +172,18 @@
                 </ul>
             </div>
 
-            <div class="projectGroup">
+            <div class="projectGroup" id="projects">
                 <h2 class="titleFonts animate-typing"> Projects</h2>
                 <div id="projectList" class="grid grid-cols-2 gap-4" id="projectList">
+   
+
                     <div class="individualProject">
                         <div>
                             <h2 class="projectName">Holiday Finder</h2>
-                            <a href="https://github.com/bijaykadariya123/ProjectUnit1">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                            <p>Technologies: HTML CSS JavaScript, JQuery and Ajax API requests</p>
+                            <a href="https://github.com/bijaykadariya123/ProjectUnit1">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a><br/>
+                            <a href="https://holidayfinder.onrender.com">Deployed <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Built a responsive web application utilizing HTML, CSS, JS, jQuery, and AJAX API requests to determine the National Holiday of the United States.</p>
+                            <p><span style="font-weight: 900;">Technologies:</span>  HTML CSS JavaScript, JQuery and Ajax API requests</p>
                         </div>  
                         <div>
                             <img class="projectImage" src="./country.png" alt="image"/>
@@ -184,8 +193,10 @@
                     <div class="individualProject">
                         <div>
                             <h2 class="projectName">RecipeApp</h2>
-                            <a href="https://github.com/bijaykadariya123/unit3project_frontend">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                            <p>Technologies: HTML, CSS, JavaScript, React, Express, MongoDB, Sass, Bootstrap</p>
+                            <a href="https://github.com/bijaykadariya123/unit3project_frontend">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a><br/>
+                            <a href="https://recipe-app-su1y.onrender.com">Deployed <span style="color:rgb(48, 48, 161); padding-top: 40px;">click here</span></a>
+                            <p>Built a user-friendly recipe app that empowers you to create a digital log of your culinary creations, making it effortless to revisit and recreate your favorite dishes.</p>
+                            <p><span style="font-weight: 900;">Technologies:</span>  HTML, CSS, JavaScript, React, Express, MongoDB, Sass, Bootstrap</p>
                         </div>  
                         <div>
                             <img class="projectImage" src="./recipeApp.png" alt="image"/>
@@ -195,8 +206,10 @@
                     <div class="individualProject">
                         <div>
                             <h2 class="projectName">MovieApp</h2>
-                            <a href="https://github.com/bijaykadariya123/project-4-movieapp-react">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                            <p>Technologies:  HTML, CSS, JavaScript,Python, Django, React, Node, Neon,Bootstrap</p>
+                            <a href="https://github.com/bijaykadariya123/project-4-movieapp-react">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a><br/>
+                            <a href="https://project4-movieapp-react.onrender.com">Deployed <span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Designed and developed a Movie Management Web application with comprehensive CRUD(Create, Read, Update, Delete) functionality.</p>
+                            <p><span style="font-weight: 900;">Technologies:</span>   HTML, CSS, JavaScript,Python, Django, React, Node, Neon,Bootstrap</p>
                         </div>  
                         <div>
                             <img class="projectImage" src="./movieapp.png" alt="image name"/>
@@ -206,8 +219,10 @@
                     <div class="individualProject">
                         <div>
                             <h2 class="projectName">Shopify</h2>
-                            <a href="https://github.com/bijaykadariya123/capstone-frontEnd">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a>
-                            <p>Technologies:  HTML, CSS, JavaScript,Python, Django, React, Node, Neon,tailwindcss</p>
+                            <a href="https://github.com/bijaykadariya123/capstone-frontEnd">GitHub <span style="color:rgb(48, 48, 161);">click here</span></a><br/>
+                            <a href="https://shopping-cart-p6gf.onrender.com">Deployed<span style="color:rgb(48, 48, 161);">click here</span></a>
+                            <p>Developed a robust Shopping Cart Web application with a technology stack. The goal was to create a versatile shopping experience with full CRUD(Create, Read, Update, Delete) functionality.</p>
+                            <p> <span style="font-weight: 900;">Technologies:</span>  HTML, CSS, JavaScript,Python, Django, React, Node, Neon,tailwindcss</p>
                         </div>  
                         <div>
                             <img class="projectImage" src="./Shopify.png" alt="image"/>
