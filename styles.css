@@ -100,5 +100,10 @@ li{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.contact{
+    font-size: 40px;
+    font-weight: 900;
+}
+
 
 

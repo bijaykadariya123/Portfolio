@@ -88,6 +88,15 @@
         }
     }
 </script>
+
+<script>
+    function scrollToContactSection(){
+        const contactSection = document.getElementById('contact');
+        if(contactSection){
+            contactSection.scrollIntoView({behavior:'smooth'})
+        }
+    }
+</script>
 </head>
 <body> 
         <div class="flex justify-between items-center h-14 ">
@@ -104,12 +113,16 @@
                 </div>
 
                 <div class="relative cursor-pointer ">
-                    <p class="p-6" onClick="scrollToProjectsSection()">Project</p>
-                   
+                    <p class="p-6" onClick="scrollToProjectsSection()">Project</p>   
                 </div>
                 <li class="navBarright p-4"><a href="./Bijay_Kadariya_Resume_1023.pdf" target="_blank" class="block px-4 py-2">Resume</a></li>   
                 <li class="navBarright p-4"><a href="https://www.linkedin.com/in/bijay-kadariya-212a11247/" target="_blank" class="block px-4 py-2">LinkedIn</a></li>    
-                <li class="navBarright p-4"><a href="https://github.com/bijaykadariya123" target="_blank" class="block px-4 py-2">GitHub</a></li> 
+                <li class="navBarright p-4"><a href="https://github.com/bijaykadariya123" target="_blank" class="block px-4 py-2">GitHub</a></li>
+
+                <div class="relative cursor-pointer ">
+                    <p class="p-6" onClick="scrollToContactSection()">Contact</p>   
+                </div>
+            </ul>
                 <!--====================================New Changes=================================================================  -->
             
             <!-- <div class="relative cursor-pointer ">
@@ -125,7 +138,7 @@
                 
             <!-- ===================================================================================================== -->
             
-            </ul>
+
         </div>
         <div id="popup" class="popup">
             <div class="popup-content max-w-md">
@@ -235,7 +248,8 @@
             </div>
 
         </div>
-        <div style="text-align: center;" class="pt-3">
+        <div id ="contact" style="text-align: center;" class="pt-3">
+            <h1 class="contact">Contact</h1>
             <P>kadbijay@gmail.com</P>
             <P>804-937-6758</P>
         </div>
